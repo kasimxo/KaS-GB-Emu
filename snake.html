@@ -1,18 +1,90 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>KaS-GB-Snake</title>
+        <!-- <script src="index.js"></script> -->
+        <script src="snake.js"> </script>
         <link rel="apple-touch-icon" sizes="180x180" href="imgs/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon/favicon-16x16.png">
         <link rel="manifest" href="imgs/favicon/site.webmanifest">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header class="header">
             <a href="index.html"><img src="imgs/favicon/android-chrome-512x512.png" alt="Personal logo"></a>
-            <div class="menu"><a href="snake.html"><h1>Snake</h1></a></div>
-            
+            <div class="menu">
+                <h1>Status: On</h1>
+                <a href="snake.html"><h1>Currently playing: Serpent</h1></a>
+                
+            </div>
         </header>
-        
+        <section class="playableArea">
+            <div class="containsText">
+                <!-- This div is for text at the left of the console -->
+                <h2>What is this?</h2>
+                <p>KaS-GB-Emu stands for:
+                    <br/> Kasimxo - GameBoy - Emulator
+                </p>
+                <h2>What the hell?</h2>
+                <p>If you miss playing old GAME BOY games, <br/> look no further. Here you can play a few for free. </p>
+                <a href="https://github.com/kasimxo/KaS-GB-Emu" target="_blank"><p>Github</p></a>
+            </div>
+            <div class="gameBoy">
+                <!-- This is our game -->
+                <canvas id="play" width="208px" height="178px" >
+                </canvas>
+            </div>
+            <div class="containsText">
+                <!-- This div is for text at the right of the console -->
+                <h2>Controls:</h2>
+                <p>You can use your keyboard <br/>or<br/> click the buttons on the console</p>
+                <table>
+                    <tr>
+                        <th>GAMEBOY</th>
+                        <th>KEYBOARD</th>
+                    </tr>
+                    <tr>
+                        <th>A</th>
+                        <th>K</th>
+                    </tr>
+                    <tr>
+                        <th>B</th>
+                        <th>J</th>
+                    </tr>
+                    <tr>
+                        <th>&uarr;</th>
+                        <th>W</th>
+                    </tr>
+                    <tr>
+                        <th>&larr;</th>
+                        <th>A</th>
+                    </tr>
+                    <tr>
+                        <th>&darr;</th>
+                        <th>S</th>
+                    </tr>
+                    <tr>
+                        <th>&rarr;</th>
+                        <th>D</th>
+                    </tr>
+                    
+                </table>
+            </div>
+        </section>
+        <section class="gameSelector">
+            
+            <div class="game" onclick="location.href='snake.html';">
+                <div class="fondo_juego">
+                    <div class="juego" id="tetris">
+                        <div class="mascara_juego"> </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>This is a test webpage.</p>
+        </footer>
     </body>
 </html>

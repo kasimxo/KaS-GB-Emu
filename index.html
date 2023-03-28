@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>KaS-GB-Emu</title>
+        <script src="index.js"></script>
         <link rel="apple-touch-icon" sizes="180x180" href="imgs/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon/favicon-16x16.png">
@@ -19,9 +21,13 @@
         <section class="playableArea">
             <div class="containsText">
                 <!-- This div is for text at the left of the console -->
-                 <h2>What the hell?</h2>
+                <h2>What is this?</h2>
+                <p>KaS-GB-Emu stands for:
+                    <br/> Kasimxo - GameBoy - Emulator
+                </p>
+                <h2>What the hell?</h2>
                 <p>If you miss playing old GAME BOY games, <br/> look no further. Here you can play a few for free. </p>
-                <a href=""><p>Github</p></a>
+                <a href="https://github.com/kasimxo/KaS-GB-Emu" target="_blank"><p>Github</p></a>
             </div>
             <div class="gameBoy"></div>
             <div class="containsText">
@@ -62,14 +68,14 @@
             </div>
         </section>
         <section class="gameSelector">
-            <div class="game">
+            <div class="game" onclick="location.href='snake.html';">
                 <div class="fondo_juego">
                     <div class="juego" id="serpent">
                         <div class="mascara_juego"></div>
                     </div>
                 </div>
             </div>
-            <div class="game">
+            <div class="game" onclick="location.href='snake.html';">
                 <div class="fondo_juego">
                     <div class="juego" id="tetris">
                         <div class="mascara_juego"> </div>

@@ -1,28 +1,48 @@
+var PowerButton;
+var textPosition = 0;
+var DrawNintendoID;
 function TurnOffOn() {
-    var TurnOn = document.getElementById('Button_on');
-    var TurnOff = document.getElementById('Button_off');
+    PowerButton = document.getElementById('Button_power');
+    let PowerButtonState = PowerButton.getAttribute("data-state");
 
-    /* Right now you can click in all the img, it should not behave that way */
-
-    if (TurnOn.hasAttribute('hidden')) {
-        TurnOn.removeAttribute('hidden');
-        TurnOff.setAttribute('hidden', true);
-    } else {
-        TurnOff.removeAttribute('hidden');
-        TurnOn.setAttribute('hidden', true);
+    if(PowerButtonState=== 'off') {
+        PowerButton.style.left = '66px';
+        PowerButton.setAttribute("data-state","on"); 
+        TurnOn();
+    } else if (PowerButtonState==='on') {
+        PowerButton.style.left = '40px';
+        PowerButton.setAttribute("data-state","off"); 
     }
 
 }
 
-setTimeout(drawNintendo, 1000);
-
+function TurnOn() {
+    DrawNintendoID = setInterval(drawNintendo,"100");
+}
 
 
 function drawNintendo() {
+    clearCanvas();
     var canvas = document.getElementById("play");
     var ctx = canvas.getContext("2d");
+
+
     ctx.font='50px Calibri';
     ctx.fillStyle = "black";
     ctx.textAlign='center';
-    ctx.fillText('Nintendo',(canvas.width/2),(canvas.height/2)); 
+    ctx.fillText('Nintendo',(canvas.width/2),textPosition); 
+
+    textPosition++;
+    
+    if(textPosition >= canvas.height/2) {
+        window.clearInterval(DrawNintendoID);
+    }
+    
+}
+
+function clearCanvas() {
+    var canvas = document.getElementById("play");
+    var ctx = canvas.getContext("2d");
+
+    ctx.clearRect(0,0,canvas.width,canvas.height);
 }

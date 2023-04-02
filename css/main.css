@@ -135,14 +135,17 @@ canvas {
     width: 208px;
     height: 178px;
     */
-    background:blue;
+    /* background:blue; */
     display: block;
     margin: 0 auto;
     position: absolute;
     top:95px;
     left: 90px;
 }
-
+#Button_power {
+    position: relative;
+    left: 40px;
+}
 button {
     border: none;
     background-color: #00000000;

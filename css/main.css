@@ -145,6 +145,7 @@ canvas {
 #Button_power {
     position: relative;
     left: 40px;
+    top:-5px;
 }
 button {
     border: none;
@@ -153,6 +154,23 @@ button {
 button:hover {
     cursor: pointer;
 }
+/*
+#Nintendo_logo {
+    position:relative;
+    width: 150px;
+    left:0px;
+    animation-name: slide-center;
+    animation-duration: 4s;
+}
+@keyframes slide-center {
+    from {
+        top:0px;
+    }
+    to {
+        top:100px;
+    }
+}
 footer {
     
 }
+*/

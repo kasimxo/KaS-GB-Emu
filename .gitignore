@@ -1,0 +1,3 @@
+/bin/
+# Added .psd filter to eliminate references/original images
+*.psd
